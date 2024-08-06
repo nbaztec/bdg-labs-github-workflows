@@ -59,7 +59,7 @@ jobs:
           fetch-depth: 0
 
       - name: Setup env
-        uses: bgd-labs/github-workflows/.github/actions/env@main
+        uses: nbaztec/bgd-labs-github-workflows/.github/actions/env@main
         with:
           RPC_MAINNET: ${{secrets.RPC_MAINNET}}
           RPC_POLYGON: ${{secrets.RPC_POLYGON}}
@@ -103,7 +103,7 @@ jobs:
         id: build
 
       - name: Run Forge tests
-        uses: bgd-labs/github-workflows/.github/actions/foundry-test@main
+        uses: nbaztec/bgd-labs-github-workflows/.github/actions/foundry-test@main
         with:
           MODE: ${{ inputs.mode }}
           ROOT_DIR: ${{ inputs.ROOT_DIR }}
